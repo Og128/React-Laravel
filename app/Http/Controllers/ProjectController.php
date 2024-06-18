@@ -26,7 +26,6 @@ class ProjectController extends Controller
         if (request("name")) {
             $query->where("name", "like", "%" . request("name") . "%");
         }
-
         if (request("status")) {
             $query->where("status", "=", request("status"));
         }
@@ -108,7 +107,6 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $image = $data['image'] ?? null;
-        $data['created_by'] = Auth::id();
         $data['updated_by'] = Auth::id();
         if ($image) {
             if ($project->image_path) {
