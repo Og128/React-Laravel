@@ -1,5 +1,5 @@
 import Authenticated from "@/Layouts/AuthenticatedLayout"
-import { USER_STATUS_CLASS_MAP, USER_STATUS_TEXT_MAP } from "@/constants"
+import { PROJECT_STATUS_CLASS_MAP, PROJECT_STATUS_TEXT_MAP } from "@/constants"
 import { Head } from "@inertiajs/react"
 import TasksTable from "../Task/TaskTable"
 
@@ -39,8 +39,8 @@ export default function Show({ auth, user, tasks, queryParams }) {
 										<label className="font-bold text-lg">User Status</label>
 										<p className="mt-1">
 											<span
-												className={"px-2 py-1 round text-white " + USER_STATUS_CLASS_MAP[user.status]}>
-												{USER_STATUS_TEXT_MAP[user.status]}
+												className={"px-2 py-1 round text-white " + PROJECT_STATUS_CLASS_MAP[user.status]}>
+												{PROJECT_STATUS_TEXT_MAP[user.status]}
 											</span>
 										</p>
 									</div>
